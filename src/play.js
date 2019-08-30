@@ -28,3 +28,7 @@ store.dispatch({ type: 'LIKE CHEECH AND CHONG' });
 
 store.dispatch({ type: 'HITS FROM THE BONG' });
 
+const fetchRates = () => dispatch => {
+  fetch('https://api.ratesapi.io/api/latest?base=USD')
+    .then(res => res.json)
+}
