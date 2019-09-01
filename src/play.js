@@ -65,9 +65,9 @@ const store = createStore (
 //   payload: getRates()
 // });
 
-store.dispatch({ type: 'LIKE CHEECH AND CHONG' });
+store.dispatch({ type: 'one action' });
 
-store.dispatch({ type: 'HITS FROM THE BONG' });
+store.dispatch({ type: 'a second action' });
 
 // I think this is a different way to do the fetch thing, will play around with later
 // const fetchRates = () => dispatch => {
