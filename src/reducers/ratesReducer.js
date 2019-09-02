@@ -1,4 +1,4 @@
-import { FETCH_RATES } from '../actions/ratesActions';
+import { FETCH_RATES, FETCH_RATES_LOADING } from '../actions/ratesActions';
 
 const initialState = {
   rates: [],
@@ -8,6 +8,8 @@ const initialState = {
 
 export default function reducer(state = initialState, action) {
   switch(action.type) {
+    case FETCH_RATES_LOADING:
+      return { ...state, loading: true };    
     case FETCH_RATES:
       return { ...state, rates: action.payload, loading: false };
     default:
